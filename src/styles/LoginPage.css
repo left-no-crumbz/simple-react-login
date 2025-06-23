@@ -95,6 +95,7 @@ h1, h2, h3, h4, h5, h6 {
     input {
         width: 100%;
         background-color: white;
+        color: var(--slate-900);
         height: 40px;
         border-radius: 5px;
         border: 1px var(--slate-200) solid;
@@ -108,11 +109,17 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     button {
-        background-color: var(--purple-600);
+        width: 100%;
     }
 
     button:hover {
         background-color: var(--purple-700);
+    }
+
+    .link {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
     }
 }
 
