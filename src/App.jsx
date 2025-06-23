@@ -5,7 +5,6 @@ import './styles/App.css';
 
 function App() {
   return (
-    console.log("Hello!"),
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LoginPage />} />

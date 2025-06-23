@@ -1,5 +1,5 @@
 import "../styles/LoginPage.css";
-import { CiMail } from "react-icons/ci";
+import { CiUser } from "react-icons/ci";
 import { CiLock } from "react-icons/ci";
 import { useNavigate } from "react-router";
 import { useState } from "react";
@@ -8,13 +8,13 @@ import SubmitButton from "../components/SubmitButton.jsx";
 
 function LoginPage() {
     const navigate = useNavigate();
-    const [email, setEmail] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
     function handleSubmit(e) {
         e.preventDefault();
-        if (email.trim() && password.trim()) {
-            navigate("/landing");
+        if (username.trim() && password.trim()) {
+            navigate("/landing", {state: { username } });
         } else {
             alert("Please fill in both fields.");
         }
@@ -30,14 +30,14 @@ function LoginPage() {
 
                 <form onSubmit={handleSubmit}>
                     <Input
-                        label="Email Address"
-                        icon={CiMail} 
-                        id="email-address"
-                        name="email-address"
-                        type="email"
-                        placeholder="Enter your email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        label="Username"
+                        icon={CiUser} 
+                        id="username"
+                        name="username"
+                        type="text"
+                        placeholder="Enter your username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
                     />
 
                     <br />
