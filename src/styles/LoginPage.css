@@ -1,0 +1,135 @@
+:root {
+    /* primary colors */
+    --purple-900: #581c87;
+    --purple-700: #7c3aed;
+    --purple-600: #9333ea;
+    --purple-500: #a822f7;
+
+    /* background colors */
+    --slate-900: #0f172a;
+    --white-op-95: rgba(255, 255, 255, 0.95);
+    --white-op-80: rgba(255, 255, 255, 0.8);
+    --white-op-60: rgba(255, 255, 255, 0.6);
+
+    /* text colors */
+    --slate-700: #334155;
+    --slate-600: #475569;
+    --slate-500: #64748b;
+    --slate-400: #94a3b8;
+
+    /* interactive elements */
+    --slate-200: #e2e8f0;
+    --slate-50: #f8fafc;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Geist", Helvetica, system-ui, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom right, var(--slate-900), var(--purple-900), var(--slate-900));
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+.login-container {
+    background-color: var(--white-op-95);
+    width: 400px;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+
+    #title {
+        font-size: 2rem;
+        color: var(--slate-900);
+        text-align: center;
+    }
+
+    #subtitle {
+        font-size: .90rem;
+        color: var(--slate-600);
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    label {
+        font-size: .85rem;
+        color: var(--slate-700);
+        font-weight: 700;
+        margin-bottom: .5rem;
+    }
+
+    input {
+        width: 100%;
+        background-color: white;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px var(--slate-200) solid;
+        padding: 1rem;
+        padding-left: 2.5rem;
+    }
+
+    input::placeholder {
+        font-size: .85rem;
+        color: var(--slate-400);
+    }
+
+    button {
+        background-color: var(--purple-600);
+    }
+
+    button:hover {
+        background-color: var(--purple-700);
+    }
+}
+
+.custom-input {
+    position: relative;
+}
+
+.icon {
+    height: 30px;
+    width: 30px;
+    color: var(--slate-400);
+    position: absolute;
+    box-sizing:border-box;
+    top:50%;
+    left:2px;
+    transform: translateY(-50%);
+    padding-left: .5rem;
+}
+    
+
